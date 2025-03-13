@@ -1,10 +1,13 @@
 import "./App.css";
+import Headers from "./components/header";
+import Sidebar from "./components/sidebar";
 
 function App() {
   return (
-    <div className="w-full h-screen bg-slate-800 text-white flex items-center justify-center">
-      TailwindCSS 굿
-    </div>
+    <>
+      <Headers />
+      <Sidebar />
+    </>
   );
 }
 
