@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   // 메뉴의 열고 닫는 상태를 관리
@@ -8,7 +9,7 @@ export default function Sidebar() {
   const [isGoodsOpen, setIsGoodsOpen] = useState(false);
 
   return (
-    <div className="relative flex h-screen overflow-y-auto w-full max-w-[20rem] flex-col rounded-xl bg-white bg-clip-border p-4 text-gray-700 shadow-xl shadow-blue-gray-900/5">
+    <div className="relative flex h-full w-[20rem] flex-col rounded-xl bg-white bg-clip-border p-4 text-gray-700 shadow-xl shadow-blue-gray-900/5">
       <div className="p-4 mb-2">
         <h5 className="block font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
           Sidebar
@@ -72,10 +73,9 @@ export default function Sidebar() {
             {isDashboardOpen && (
               <div className="block w-full py-1 font-sans text-sm antialiased font-light leading-normal text-gray-700">
                 <nav className="flex min-w-[240px] flex-col gap-1 p-0 font-sans text-base font-normal text-blue-gray-700">
-                  <div
-                    role="button"
+                  <Link
+                    to="/statistics"
                     className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
-                    onClick={() => isDashboardOpen((prev) => !prev)}
                   >
                     <div className="grid mr-4 place-items-center">
                       <svg
@@ -95,9 +95,9 @@ export default function Sidebar() {
                       </svg>
                     </div>
                     매출통계
-                  </div>
-                  <div
-                    role="button"
+                  </Link>
+                  <Link
+                    to="/"
                     className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
                   >
                     <div className="grid mr-4 place-items-center">
@@ -118,9 +118,9 @@ export default function Sidebar() {
                       </svg>
                     </div>
                     매출분석
-                  </div>
-                  <div
-                    role="button"
+                  </Link>
+                  <Link
+                    to="/"
                     className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
                   >
                     <div className="grid mr-4 place-items-center">
@@ -141,7 +141,7 @@ export default function Sidebar() {
                       </svg>
                     </div>
                     이상매출알림
-                  </div>
+                  </Link>
                 </nav>
               </div>
             )}
@@ -203,8 +203,8 @@ export default function Sidebar() {
             {isSalesOpen && (
               <div className="block w-full py-1 font-sans text-sm antialiased font-light leading-normal text-gray-700">
                 <nav className="flex min-w-[240px] flex-col gap-1 p-0 font-sans text-base font-normal text-blue-gray-700">
-                  <div
-                    role="button"
+                  <Link
+                    to="/"
                     className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
                   >
                     <div className="grid mr-4 place-items-center">
@@ -225,9 +225,9 @@ export default function Sidebar() {
                       </svg>
                     </div>
                     일간 매출 조회
-                  </div>
-                  <div
-                    role="button"
+                  </Link>
+                  <Link
+                    to="/"
                     className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
                   >
                     <div className="grid mr-4 place-items-center">
@@ -248,9 +248,9 @@ export default function Sidebar() {
                       </svg>
                     </div>
                     주간 매출 조회
-                  </div>
-                  <div
-                    role="button"
+                  </Link>
+                  <Link
+                    to="/"
                     className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
                   >
                     <div className="grid mr-4 place-items-center">
@@ -271,15 +271,15 @@ export default function Sidebar() {
                       </svg>
                     </div>
                     월간 매출 조회
-                  </div>
+                  </Link>
                 </nav>
               </div>
             )}
           </div>
         </div>
         {/* 사이드메뉴 3 */}
-        <div
-          role="button"
+        <Link
+          to="/"
           className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
         >
           <div className="grid mr-4 place-items-center">
@@ -302,7 +302,7 @@ export default function Sidebar() {
               <span className="">14</span>
             </div>
           </div>
-        </div>
+        </Link>
         {/* 사이드메뉴4 */}
         <div className="relative block w-full">
           <div
@@ -356,8 +356,8 @@ export default function Sidebar() {
             {isStocksOpen && (
               <div className="block w-full py-1 font-sans text-sm antialiased font-light leading-normal text-gray-700">
                 <nav className="flex min-w-[240px] flex-col gap-1 p-0 font-sans text-base font-normal text-blue-gray-700">
-                  <div
-                    role="button"
+                  <Link
+                    to="/"
                     className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
                   >
                     <div className="grid mr-4 place-items-center">
@@ -378,9 +378,9 @@ export default function Sidebar() {
                       </svg>
                     </div>
                     재고현황
-                  </div>
-                  <div
-                    role="button"
+                  </Link>
+                  <Link
+                    to="/"
                     className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
                   >
                     <div className="grid mr-4 place-items-center">
@@ -401,9 +401,9 @@ export default function Sidebar() {
                       </svg>
                     </div>
                     발주
-                  </div>
-                  <div
-                    role="button"
+                  </Link>
+                  <Link
+                    to="/"
                     className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
                   >
                     <div className="grid mr-4 place-items-center">
@@ -424,7 +424,7 @@ export default function Sidebar() {
                       </svg>
                     </div>
                     폐기관리
-                  </div>
+                  </Link>
                 </nav>
               </div>
             )}
@@ -487,8 +487,8 @@ export default function Sidebar() {
             {isGoodsOpen && (
               <div className="block w-full py-1 font-sans text-sm antialiased font-light leading-normal text-gray-700">
                 <nav className="flex min-w-[240px] flex-col gap-1 p-0 font-sans text-base font-normal text-blue-gray-700">
-                  <div
-                    role="button"
+                  <Link
+                    to="/"
                     className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
                   >
                     <div className="grid mr-4 place-items-center">
@@ -509,9 +509,9 @@ export default function Sidebar() {
                       </svg>
                     </div>
                     상품조회
-                  </div>
-                  <div
-                    role="button"
+                  </Link>
+                  <Link
+                    to="/"
                     className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
                   >
                     <div className="grid mr-4 place-items-center">
@@ -532,7 +532,7 @@ export default function Sidebar() {
                       </svg>
                     </div>
                     상품등록
-                  </div>
+                  </Link>
                   <div
                     role="button"
                     className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"

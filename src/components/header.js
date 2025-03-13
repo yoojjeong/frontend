@@ -15,7 +15,7 @@ export default function Headers() {
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           {/* 로고, 홈페이지 경로 -> 나중에 수정 */}
           {/* a href는 나중에 Link로 변경 */}
-          <a href="https://flowbite.com" class="flex items-center">
+          <a href="/" class="flex items-center">
             <img
               src="https://flowbite.com/docs/images/logo.svg"
               className="mr-3 h-6 sm:h-9"
