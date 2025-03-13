@@ -330,7 +330,7 @@ export default function Sidebar() {
               </p>
               <span
                 className={`ml-4 transition-transform ${
-                  isSalesOpen ? "" : "rotate-180"
+                  isStocksOpen ? "" : "rotate-180"
                 }`}
               >
                 <svg
