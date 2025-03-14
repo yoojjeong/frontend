@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import RootLayout from "./pages/RootLayout";
 import Home from "./pages/Home";
-import Statistics from "./pages/Statistics";
+import Statistics from "./features/statistics/pages/Statistics";
 
 const router = createBrowserRouter([
   {
