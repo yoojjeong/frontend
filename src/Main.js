@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import RootLayout from "./pages/RootLayout";
-import Statistics from "./features/statistics/Statistics";
 import Home from "./pages/Home";
+import SalesToday from "./features/statistics/pages/SalesToday";
 
 const router = createBrowserRouter([
   {
@@ -17,8 +17,8 @@ const router = createBrowserRouter([
       },
       {
         // 매출 조회
-        path: "/statistics",
-        element: <Statistics />,
+        path: "/statistics/salesToday",
+        element: <SalesToday />,
       },
     ],
   },
