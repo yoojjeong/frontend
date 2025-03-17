@@ -9,6 +9,8 @@ function GoodsByCategory() {
   const [loading, setLoading] = useState(true);
 
   const { firstname } = useParams(); // url의 파리미터 값 받아오기
+  
+  console.log("firstName", firstname);
 
   const [category, setCategory] = useState("");
 
@@ -23,6 +25,7 @@ function GoodsByCategory() {
     } else if (firstname === "digital") {
       setCategory("디지털 & 문구");
     }
+    console.log("카테고리 : ", category)
   }, [firstname]);
 
   // 대분류 상품 연결하기
@@ -32,7 +35,9 @@ function GoodsByCategory() {
     async function getGoodsListByFirstCategory() {
       try {
         const data = await fetchGoodsByCategory(category);
-        console.log(data);
+
+        console.log("data", data);
+
         setGoodsList(data);
       } catch (error) {
         setError(error.message);
