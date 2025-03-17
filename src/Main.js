@@ -1,15 +1,15 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import RootLayout from "./pages/RootLayout";
+import Home from "./pages/Home";
 
-import Statistics from "./features/statistics/pages/Statistics";
-
+import Association from "./features/cart_analysis/pages/Association";
+import GoodsList from "./features/cart_analysis/pages/GoodsList";
 import GoodsByCategory from "./features/cart_analysis/pages/GoodsByCategory";
 import GoodsBySubCategory from "./features/cart_analysis/pages/GoodsBySubCategory";
 import GoodsDetail from "./features/cart_analysis/pages/GoodDetail";
-import Association from "./features/cart_analysis/pages/Association";
-import Home from "./pages/Home";
-import GoodsList from "./features/cart_analysis/pages/GoodsList";
+import Statistics from "./features/statistics/Statistics";
+import InventoriesList from "./features/inventory/pages/InventoriesList";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +51,11 @@ const router = createBrowserRouter([
         // 장바구니분석
         path: "/association",
         element: <Association />,
+      },
+      {
+        // 재고관리 (전체재고조회)
+        path: "/inventory/findAll",
+        element: <InventoriesList />,
       },
     ],
   },
