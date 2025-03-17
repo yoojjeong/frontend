@@ -6,11 +6,10 @@ import GoodsList from "./features/cart_analysis/pages/GoodsList";
 import GoodsByCategory from "./features/cart_analysis/pages/GoodsByCategory";
 import GoodsBySubCategory from "./features/cart_analysis/pages/GoodsBySubCategory";
 import GoodsDetail from "./features/cart_analysis/pages/GoodDetail";
-import Statistics from "./features/statistics/Statistics";
+
 import InventoriesList from "./features/inventory/pages/InventoriesList";
 import SalesToday from "./features/statistics/pages/SalesToday";
 import DashBoard from "./pages/DashBoard";
-
 
 const router = createBrowserRouter([
   {

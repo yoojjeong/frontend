@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import InventoryList from "./InventoriesList";
 import { fetchInventoryList } from "../api/HttpService";
 
 function InventoriesList() {
