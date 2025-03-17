@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchTodaySales } from "../api/httpStatisticsService";
-import DiffChart from "../component/DiffChart";
+import DiffChart from "../components/DiffChart";
 
 export default function SalesToday() {
   const [salesData, setSalesData] = useState([]);
