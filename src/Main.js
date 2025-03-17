@@ -1,13 +1,13 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import RootLayout from "./pages/RootLayout";
-import Statistics from "./features/statistics/pages/Statistics";
+import SalesToday from "./features/statistics/pages/SalesToday";
+import DashBoard from "./pages/DashBoard";
 
 import GoodsByCategory from "./features/cart_analysis/pages/GoodsByCategory";
 import GoodsBySubCategory from "./features/cart_analysis/pages/GoodsBySubCategory";
 import GoodsDetail from "./features/cart_analysis/pages/GoodDetail";
 import Association from "./features/cart_analysis/pages/Association";
-import Home from "./pages/Home";
 import GoodsList from "./features/cart_analysis/pages/GoodsList";
 
 const router = createBrowserRouter([
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
       {
         // 메인 화면
         path: "/",
-        element: <Home />,
+        element: <DashBoard />,
       },
       {
         // 매출 조회
