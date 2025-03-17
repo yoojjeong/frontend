@@ -23,8 +23,8 @@ const router = createBrowserRouter([
       },
       {
         // 매출 조회
-        path: "/statistics",
-        element: <Statistics />,
+        path: "/statistics/salesToday",
+        element: <SalesToday />,
       },
       {
         // 상품찾기
