@@ -34,6 +34,7 @@ export async function fetchGoodsByCategory(firstname) {
     `http://localhost:8090/app/categories/${firstname}`
   );
 
+  console.log(response);
   if (response.status !== 200) {
     console.log("예외발생");
     throw new Error("fetchGoodsByCategory 예외발생");

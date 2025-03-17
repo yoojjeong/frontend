@@ -9,8 +9,7 @@ import GoodsBySubCategory from "./features/cart_analysis/pages/GoodsBySubCategor
 import GoodsDetail from "./features/cart_analysis/pages/GoodDetail";
 import Association from "./features/cart_analysis/pages/Association";
 import Home from "./pages/Home";
-import GoodsList from './features/cart_analysis/pages/GoodsList';
-
+import GoodsList from "./features/cart_analysis/pages/GoodsList";
 
 const router = createBrowserRouter([
   {
@@ -35,12 +34,12 @@ const router = createBrowserRouter([
       },
       {
         // 카테고리별
-        path: "/categories/:firstName",
+        path: "/categories/:firstname",
         element: <GoodsByCategory />,
       },
       {
         // 카테고리별 ( 소분류 )
-        path: "/categories/:firstName/:secondName",
+        path: "/categories/:firstname/:secondname",
         element: <GoodsBySubCategory />,
       },
       {
