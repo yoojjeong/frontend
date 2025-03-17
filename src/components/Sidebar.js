@@ -74,7 +74,7 @@ export default function Sidebar() {
               <div className="block w-full py-1 font-sans text-sm antialiased font-light leading-normal text-gray-700">
                 <nav className="flex min-w-[240px] flex-col gap-1 p-0 font-sans text-base font-normal text-blue-gray-700">
                   <Link
-                    to="/statistics"
+                    to={`/statistics/salesToday`}
                     className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
                   >
                     <div className="grid mr-4 place-items-center">
@@ -279,7 +279,7 @@ export default function Sidebar() {
         </div>
         {/* 사이드메뉴 3 */}
         <Link
-          to="/"
+          to="/association"
           className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
         >
           <div className="grid mr-4 place-items-center">
@@ -488,7 +488,7 @@ export default function Sidebar() {
               <div className="block w-full py-1 font-sans text-sm antialiased font-light leading-normal text-gray-700">
                 <nav className="flex min-w-[240px] flex-col gap-1 p-0 font-sans text-base font-normal text-blue-gray-700">
                   <Link
-                    to="/"
+                    to="/categories/findAll"
                     className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
                   >
                     <div className="grid mr-4 place-items-center">
@@ -533,7 +533,8 @@ export default function Sidebar() {
                     </div>
                     상품등록
                   </Link>
-                  <div
+                  <Link
+                    to="/"
                     role="button"
                     className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
                   >
@@ -555,7 +556,7 @@ export default function Sidebar() {
                       </svg>
                     </div>
                     상품관리
-                  </div>
+                  </Link>
                 </nav>
               </div>
             )}
