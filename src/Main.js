@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import RootLayout from "./pages/RootLayout";
-import Home from "./pages/Home";
 import SalesToday from "./features/statistics/pages/SalesToday";
+import DashBoard from "./pages/DashBoard";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
       {
         // 메인 화면
         path: "/",
-        element: <Home />,
+        element: <DashBoard />,
       },
       {
         // 매출 조회
