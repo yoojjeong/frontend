@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import RootLayout from "./pages/RootLayout";
+
 import Statistics from "./features/statistics/pages/Statistics";
 
 import GoodsByCategory from "./features/cart_analysis/pages/GoodsByCategory";
