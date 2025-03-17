@@ -46,7 +46,7 @@ export default function Weather() {
             className="w-6 h-6"
           />
           <span>
-            {weather.name} {Math.round(weather.main.temp)}℃
+            {weather.name} {parseFloat(weather.main.temp.toFixed(1))}℃
           </span>
         </div>
       ) : (
