@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   // 메뉴의 열고 닫는 상태를 관리
-  const [isDashboardOpen, setIsDashboardOpen] = useState(false);
   const [isSalesOpen, setIsSalesOpen] = useState(false);
   const [isStocksOpen, setIsStocksOpen] = useState(false);
   const [isGoodsOpen, setIsGoodsOpen] = useState(false);
@@ -18,7 +17,7 @@ export default function Sidebar() {
       <nav className="flex min-w-[240px] flex-col gap-1 p-2 font-sans text-base font-normal text-blue-gray-700">
         {/* 사이드메뉴1 */}
         <Link
-          to="/association"
+          to="/"
           className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
         >
           <div className="grid mr-4 place-items-center">

@@ -11,15 +11,7 @@ const instance = axios.create({
   },
 });
 
-const today = new Date();
-const salesDate = today.toISOString().split("T")[0];
-
-export async function fetchTodaySales() {
-  const response = await instance.get(`/salesHourly/${salesDate}`);
-  return response;
-}
-
-export async function fetchGetSales({ date }) {
+export async function fetchGetSales(date) {
   const response = await instance.get(`/salesHourly/${date}`);
   return response;
 }
