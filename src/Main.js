@@ -1,8 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import RootLayout from "./pages/RootLayout";
-import Home from "./pages/Home";
-
 import Association from "./features/cart_analysis/pages/Association";
 import GoodsList from "./features/cart_analysis/pages/GoodsList";
 import GoodsByCategory from "./features/cart_analysis/pages/GoodsByCategory";
@@ -10,6 +8,9 @@ import GoodsBySubCategory from "./features/cart_analysis/pages/GoodsBySubCategor
 import GoodsDetail from "./features/cart_analysis/pages/GoodDetail";
 import Statistics from "./features/statistics/Statistics";
 import InventoriesList from "./features/inventory/pages/InventoriesList";
+import SalesToday from "./features/statistics/pages/SalesToday";
+import DashBoard from "./pages/DashBoard";
+
 
 const router = createBrowserRouter([
   {
@@ -20,12 +21,12 @@ const router = createBrowserRouter([
       {
         // 메인 화면
         path: "/",
-        element: <Home />,
+        element: <DashBoard />,
       },
       {
         // 매출 조회
-        path: "/statistics",
-        element: <Statistics />,
+        path: "/statistics/salesToday",
+        element: <SalesToday />,
       },
       {
         // 상품찾기
