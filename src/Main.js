@@ -14,7 +14,7 @@ import GoodsBySubCategory from "./features/goods/pages/GoodsBySubCategory";
 import GoodsDetail from "./features/goods/pages/GoodDetail";
 import GoodsManagement from "./features/goods/pages/GoodsManagement";
 
-import Login from './features/member/components/Login';
+import Login from "./features/member/components/Login";
 
 import Statistics from "./features/statistics/pages/Statistics";
 import SalesToday from "./features/statistics/pages/SalesToday";
@@ -66,7 +66,6 @@ const router = createBrowserRouter([
         element: <InventoriesList />,
       },
       {
-
         // 상품관리 페이지 (수정, 삭제)
         path: "/goods/manage",
         element: <GoodsManagement />,
