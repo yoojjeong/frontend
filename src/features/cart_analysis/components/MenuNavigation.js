@@ -9,9 +9,6 @@ function MenuNavigation() {
   useEffect(() => {
     const url = location.pathname.split("/");
     const category = url[2];
-
-    console.log("category",category);
-
     setSelectedCategory(category);
 
     if (category === "food") {
@@ -82,7 +79,7 @@ function MenuNavigation() {
               }
               to="/categories/food"
             >
-              식품 
+              식품
             </NavLink>
           </li>
           <li>
