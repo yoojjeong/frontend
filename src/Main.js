@@ -7,6 +7,7 @@ import GoodsBySubCategory from "./features/cart_analysis/pages/GoodsBySubCategor
 import GoodsList from "./features/cart_analysis/pages/GoodsList";
 import RootLayout from "./pages/RootLayout";
 import Statistics from "./features/statistics/pages/Statistics";
+import Login from "./features/member/components/Login";
 
 import InventoriesList from "./features/inventory/pages/InventoriesList";
 import DashBoard from "./pages/DashBoard";
@@ -56,6 +57,11 @@ const router = createBrowserRouter([
         // 재고관리 (전체재고조회)
         path: "/inventory/findAll",
         element: <InventoriesList />,
+      },
+      {
+        // 로그인
+        path: "/app/member/login",
+        element: <Login />,
       },
     ],
   },
