@@ -1,16 +1,23 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import Association from "./features/cart_analysis/pages/Association";
-import GoodsDetail from "./features/cart_analysis/pages/GoodDetail";
-import GoodsByCategory from "./features/cart_analysis/pages/GoodsByCategory";
-import GoodsBySubCategory from "./features/cart_analysis/pages/GoodsBySubCategory";
-import GoodsList from "./features/cart_analysis/pages/GoodsList";
 import RootLayout from "./pages/RootLayout";
-import Statistics from "./features/statistics/pages/Statistics";
-import Login from "./features/member/components/Login";
+import DashBoard from "./pages/DashBoard";
+
+import Association from "./features/cart_analysis/pages/Association";
 
 import InventoriesList from "./features/inventory/pages/InventoriesList";
-import DashBoard from "./pages/DashBoard";
+
+import AddGoods from "./features/goods/pages/AddGoods";
+import GoodsList from "./features/goods/pages/GoodsList";
+import GoodsByCategory from "./features/goods/pages/GoodsByCategory";
+import GoodsBySubCategory from "./features/goods/pages/GoodsBySubCategory";
+import GoodsDetail from "./features/goods/pages/GoodDetail";
+import GoodsManagement from "./features/goods/pages/GoodsManagement";
+
+import Login from './features/member/components/Login';
+
+import Statistics from "./features/statistics/pages/Statistics";
+import SalesToday from "./features/statistics/pages/SalesToday";
 
 const router = createBrowserRouter([
   {
@@ -59,8 +66,18 @@ const router = createBrowserRouter([
         element: <InventoriesList />,
       },
       {
-        // 로그인
-        path: "/app/member/login",
+
+        // 상품관리 페이지 (수정, 삭제)
+        path: "/goods/manage",
+        element: <GoodsManagement />,
+      },
+      {
+        // 상품등록 페이지 (등록, 수정, 삭제)
+        path: "/goods/manage/add",
+        element: <AddGoods />,
+      },
+      {
+        path: "app/member/login",
         element: <Login />,
       },
     ],
