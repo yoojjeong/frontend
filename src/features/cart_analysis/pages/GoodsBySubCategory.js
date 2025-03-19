@@ -9,6 +9,7 @@ function GoodsBySubCategory() {
   const [loading, setLoading] = useState(true);
 
   const { firstname, secondname } = useParams(); // URL에서 파라미터 값 받아오기
+  
   console.log("파라미터 값 :", firstname, secondname);
 
   const [category, setCategory] = useState("");
