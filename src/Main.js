@@ -1,11 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import RootLayout from "./pages/RootLayout";
-<<<<<<< HEAD
-import Home from "./pages/Home";
-import Statistics from "./features/statistics/pages/Statistics";
-import Login from './features/member/components/Login';
-=======
 import Association from "./features/cart_analysis/pages/Association";
 import GoodsList from "./features/cart_analysis/pages/GoodsList";
 import GoodsByCategory from "./features/cart_analysis/pages/GoodsByCategory";
@@ -15,7 +10,6 @@ import GoodsDetail from "./features/cart_analysis/pages/GoodDetail";
 import InventoriesList from "./features/inventory/pages/InventoriesList";
 import SalesToday from "./features/statistics/pages/SalesToday";
 import DashBoard from "./pages/DashBoard";
->>>>>>> parent of c922bcf (Merge branch 'main' of https://github.com/KDT7team1/frontend)
 
 const router = createBrowserRouter([
   {
