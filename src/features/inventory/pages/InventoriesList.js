@@ -11,7 +11,7 @@ function InventoriesList() {
     async function getInventoryList() {
       try {
         const data = await fetchInventoryList();
-        console.log("data",data);
+        console.log(data);
         setInventoryList(data);
       } catch (error) {
         setError(error.message);
@@ -30,8 +30,7 @@ function InventoriesList() {
         <div>
           {inventoryList.map((item) => (
             <div key={item.inventoryId}>
-              재고 수정일 : {item.stockUpdateAt}
-              이름 : {item. goodsName }
+              {item.goodsId}
               재고 수량 : {item.stockQuantity}
               재고 상태 : {item.stockStatus}
             </div>

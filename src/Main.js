@@ -10,36 +10,56 @@ import GoodsDetail from "./features/cart_analysis/pages/GoodDetail";
 import InventoriesList from "./features/inventory/pages/InventoriesList";
 import SalesToday from "./features/statistics/pages/SalesToday";
 import DashBoard from "./pages/DashBoard";
-import Login from './features/member/components/Login';
 
-const router = createBrowserRouter(
-  [
-    {
-      path: "/",
-      element: <RootLayout />,
-      id: "root",
-      children: [
-        {
-          index: true, // '/' 경로를 의미
-          element: <Home />,
-        },
-        {
-          path: "statistics", // 상대 경로로 설정
-          element: <Statistics />,
-        },
-        {
-          path: "app/member/login", // 상대 경로로 변경
-          element: <Login />, // 로그인 페이지 컴포넌트를 추가
-        },
-      ],
-    },
-  ],
+const router = createBrowserRouter([
   {
-    future: {
-      v7_relativeSplatPath: true, // v7 방식으로 경로 해석
-    },
-  }
-);
+    path: "/",
+    element: <RootLayout />,
+    id: "root",
+    children: [
+      {
+        // 메인 화면
+        path: "/",
+        element: <DashBoard />,
+      },
+      {
+        // 매출 조회
+        path: "/statistics/salesToday",
+        element: <SalesToday />,
+      },
+      {
+        // 상품찾기
+        path: "/categories/findAll",
+        element: <GoodsList />,
+      },
+      {
+        // 카테고리별
+        path: "/categories/:firstname",
+        element: <GoodsByCategory />,
+      },
+      {
+        // 카테고리별 ( 소분류 )
+        path: "/categories/:firstname/:secondname",
+        element: <GoodsBySubCategory />,
+      },
+      {
+        // 상품상세보기
+        path: "/goods/findById/:id",
+        element: <GoodsDetail />,
+      },
+      {
+        // 장바구니분석
+        path: "/association",
+        element: <Association />,
+      },
+      {
+        // 재고관리 (전체재고조회)
+        path: "/inventory/findAll",
+        element: <InventoriesList />,
+      },
+    ],
+  },
+]);
 
 export default function Main() {
   return <RouterProvider router={router} />;
