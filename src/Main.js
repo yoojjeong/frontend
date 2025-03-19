@@ -8,6 +8,7 @@ import InventoriesList from "./features/inventory/pages/InventoriesList";
 <<<<<<< HEAD
 import SalesToday from "./features/statistics/pages/SalesToday";
 import DashBoard from "./pages/DashBoard";
+import AddGoods from "./features/goods/pages/AddGoods";
 
 =======
 import GoodsList from "./features/goods/pages/GoodsList";
@@ -64,9 +65,14 @@ const router = createBrowserRouter([
         element: <InventoriesList />,
       },
       {
-        // 상품관리 페이지 (등록, 수정, 삭제)
+        // 상품관리 페이지 (수정, 삭제)
         path: "/goods/manage",
         element: <GoodsManagement />,
+      },
+      {
+        // 상품등록 페이지 (등록, 수정, 삭제)
+        path: "/goods/manage/add",
+        element: <AddGoods />,
       },
     ],
   },
