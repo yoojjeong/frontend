@@ -13,6 +13,7 @@ import GoodsByCategory from "./features/goods/pages/GoodsByCategory";
 import GoodsBySubCategory from "./features/goods/pages/GoodsBySubCategory";
 import GoodsDetail from "./features/goods/pages/GoodDetail";
 import GoodsManagement from "./features/goods/pages/GoodsManagement";
+import Login from './features/member/components/Login';
 
 const router = createBrowserRouter([
   {
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
         // 상품등록 페이지 (등록, 수정, 삭제)
         path: "/goods/manage/add",
         element: <AddGoods />,
+      },
+      {
+        path: "app/member/login", // 상대 경로로 변경
+        element: <Login />, // 로그인 페이지 컴포넌트를 추가
       },
     ],
   },
