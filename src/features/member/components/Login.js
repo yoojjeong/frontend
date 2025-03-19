@@ -23,7 +23,7 @@ const Login = () => {
 
     if (response.ok) {
       alert("로그인 성공!");
-      window.location.href = "/"; // 로그인 성공 후 홈으로 이동
+      window.location.href = "/"; // 로그인 성공 후 홈으로 이동 aaaaaaa
     } else {
       alert("로그인 실패! 아이디 또는 비밀번호를 확인하세요.");
     }
